@@ -3,6 +3,9 @@ class Food extends Component {
     state = {
         food: "*Klik Lainnya...*"
     }
+    componentDidMount(){
+        alert(`Proses mount dimulai!`)
+    }
     ChangeFood = () => {
         this.setState((state) => { 
             if (state.food === "1. Sayur-sayuran = Rp. 5.000") {
@@ -11,6 +14,9 @@ class Food extends Component {
                 return {food: "1. Sayur-sayuran = Rp. 5.000"}                 
             }
         })
+    }
+    componentWillUnmount(){
+        alert('Selamat memesan makanan')
     }
     render() {
         return (
