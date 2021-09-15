@@ -7,6 +7,9 @@ class Home extends Component {
         komponen1: false,
         komponen2: false
     }
+    componentDidUpdate(prevProps, prevState, snapshot){
+        alert(`Component Updates!`)
+    }
     ubahkomponen1 = () => {
         this.setState((state) => {
             return { komponen1: !this.state.komponen1 }
