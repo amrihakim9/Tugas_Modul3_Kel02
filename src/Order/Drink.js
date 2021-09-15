@@ -3,11 +3,17 @@ class Drink extends Component {
     state = {
         order: 0
     }
+    componentDidMount(){
+        alert(`Proses mount dimulai!`)
+    }
     tambahOrder = () => {
         this.setState((state) => { return { order: state.order + 1 } })
     }
     kurangiOrder = () => {
         this.setState((state) => { return { order: state.order - 1 } })
+    }
+    componentWillUnmount(){
+        alert('Yuk dipesan minumannya :)')
     }
     render() {
         return (
